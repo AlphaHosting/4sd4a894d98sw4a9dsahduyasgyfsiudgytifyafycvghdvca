@@ -5,7 +5,7 @@ const prefix = ('!');
 
 client.on('ready', function(){	
     var ms = 40000 ;	
-    var setGame = ['Summer Army','By BlackFire#3636'];	
+    var setGame = ['Summer Army','Hosting By HeroHost'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
@@ -110,6 +110,7 @@ client.on('message',function(message) {
        .addField("**# - السيرفر:**",message.guild.name,true)
        .addField("**# - السبب:**",toReason,true)
        .addField("**# - طردت من قبل:**",message.author,true)
+       .setFooter('Hosting By HeroHost')
        if(message.member.hasPermission("KICK_MEMBERS")) return (
            toKick.sendMessage({embed: toEmbed}).then(() => message.guild.member(toKick).kick()).then(() => message.channel.send(`**Done :white_check_mark: Kicked  ${toKick}**`))
        )
@@ -136,7 +137,7 @@ client.on('message', message => {
   .addField('Sender', message.author.username)
   .addField('Message', args)
   .setThumbnail(message.author.avatarURL)
-  .setFooter(copy, client.user.avatarURL);
+  .setFooter('Hosting By HeroHost');
   m.send({ embed: bc })
   msg.delete();
   })
@@ -227,6 +228,7 @@ client.on('message', async message => {
       .addField('# - السيرفر',message.guild.name,true)
       .addField('# - تم اعطائك ميوت بواسطة',message.author,true)
       .addField('# - السبب',reason)
+      .setFooter('Hosting By HeroHost')
    
       let role = message.guild.roles.find('name', 'Muted') || message.guild.roles.get(r => r.name === 'Muted');
       if(!role) try {
