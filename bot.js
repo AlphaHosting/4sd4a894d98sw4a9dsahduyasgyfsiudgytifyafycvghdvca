@@ -5,7 +5,7 @@ const prefix = ('!');
 
 client.on('ready', function(){	
     var ms = 40000 ;	
-    var setGame = ['3D Gaming','Hosting By HeroHost'];	
+    var setGame = ['3G Gaming','Hosting By HeroHost'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
